@@ -4,12 +4,12 @@
     <div><h2 v-if="isLogged">test</h2></div>
     <div>{{ account.username }}</div>
     <!-- <div>{{ courses }}</div> -->
-    <li v-for="(item, index) in lists" :key="index">
-      <img :src="thumbnailUrl + item.id" alt="" />
-      <!-- {{ index + 1 }}.{{ thumbnailUrl }} -->
-      <br />
-      {{ item.id }}
-    </li>
+    <!-- <li v-for="(item, index) in lists" :key="index"> -->
+    <!-- <img :src="thumbnailUrl + item.id" alt="" /> -->
+    <!-- {{ index + 1 }}.{{ thumbnailUrl }} -->
+    <br />
+    <!-- {{ item.id }} -->
+    <!-- </li> -->
   </div>
 </template>
 

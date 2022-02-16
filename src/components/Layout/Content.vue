@@ -1,5 +1,7 @@
 <template>
-  <div><h2>TEST</h2></div>
+  <div class="content-wrapper">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

@@ -1,11 +1,40 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
-</template>
+    <!-- สร้าง components แยกเป็น ส่วน -->
+    <Header />
+    <!-- สร้างส่วน Concent  -->
+    <Content />
+    <Footer @onClock="onClock" title=" Copyright 2020" />
 
+    <!-- สร้าง event ย้อนกลับ -->
+  </div>
+  <div>{{ time }}</div>
+</template>
+<script>
+import Header from "@/components/Layout/Header.vue";
+import Footer from "@/components/Layout/Footer.vue";
+
+import moment from "moment";
+import Content from "@/components/Layout/Content.vue";
+export default {
+  methods: {
+    // จัดรูปแบบ เวลา
+    onClock(value) {
+      this.time = moment(value).format("MM/DD/YYYY hh:mm:ss");
+    },
+  },
+  data() {
+    return {
+      time: "",
+    };
+  },
+  components: {
+    Header,
+    Footer,
+    Content,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
